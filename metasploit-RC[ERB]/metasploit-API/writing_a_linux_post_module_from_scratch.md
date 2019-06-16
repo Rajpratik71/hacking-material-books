@@ -24,7 +24,7 @@
                1 - Research stage: For bash commands that can be used to dump target system information
                2 - Writing the metasploit template: libraries, class name, mixins, description (def initialize)
                3 - The exploit code: Basic explaination of ruby syntax + metasploit APIs (def run)
-               4 - Port module to msf database: Copy module to the rigth location and reload msfdb
+               4 - Port module to msf database: Copy module to the right location and reload msfdb
 
 
 <br /><br /><br /><br />
@@ -51,11 +51,11 @@
       1 - the libraries, class name, mixins: that contains module requires/imports.
       2 - the 'def initialize()' funtion: that contains module description/settings.
       3 - the 'def run()' funtion: that contain the script logic (the exploit code).
-      "At this stage we are going to focus in the 'libraries' and 'def initialize()' funtions".
+      "At this stage we are going to focus in the 'librarys' and 'def initialize()' functions".
 
 <br /><br />
 
-### The MSF libraries
+### The MSF librarys
 ![msf-auxiliarys](http://i.cubeupload.com/EZbnFy.png)<br />
 **rex** the basic library for most tasks: Handles sockets, protocols, text transformations, SSL, SMB, HTTP, XOR, Base64, etc.
 
@@ -97,7 +97,7 @@ Here we need to define some information about the post module, such as:<br />
 Module name, description, module author, version, platform, target architecture, DefaultOptions, etc.<br />
 ![msf-auxiliarys](http://i.cubeupload.com/eHlLPT.png)
 
-Here we can adicionaly config module's default settings using the **DefaultOptions** method
+Here we can additionally config module's default settings using the **DefaultOptions** method
 ![msf-auxiliarys](http://i.cubeupload.com/4H3A1x.png)
 
 
@@ -108,15 +108,15 @@ Here we can adicionaly config module's default settings using the **DefaultOptio
 This method adds options that the user can specify before running the module.<br />
 The **OptString.new()** API accepts string values (text-numbers-symbols) to be inputed manually by user<br />
 
-**HINT**: in **DefaultOptions** method we allready have defined the module to run againts session 1 by default.<br />
-But users can still define (manually) a different session number to run the module againts, example: set SESSION 3  
+**HINT**: in **DefaultOptions** method we already have defined the module to run againts session 1 by default.<br />
+But users can still define (manually) a different session number to run the module against, example: set SESSION 3  
 
 <br /><br />
 
 ### The register_advanced_options method (show advanced options)
 ![msf-auxiliarys](http://i.cubeupload.com/TSfW5w.png)
 This method adds advanced options that the user can specify before running the module.<br />
-The **OptBool.new()** API accepts bollean values (1 or 0 - true or false) to be inputed manually by user<br />
+The **OptBool.new()** API accepts boolean values (1 or 0 - true or false) to be inputed manually by user<br />
 The **OptString.new()** API accepts string values (text-numbers-symbols) to be inputed manually by user<br />
 
 <br /><br />
